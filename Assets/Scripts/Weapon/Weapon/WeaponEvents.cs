@@ -2,7 +2,8 @@ using System;
 using UnityEngine;
 
 [DisallowMultipleComponent]
-public class WeaponEvents : MonoBehaviour
+public class 
+    WeaponEvents : MonoBehaviour
 {
     public event Action<WeaponEvents, FireWeaponEventArgs> OnFireWeapon;
     public event Action<WeaponEvents, WeaponFiredEventArgs> OnWeaponFired;

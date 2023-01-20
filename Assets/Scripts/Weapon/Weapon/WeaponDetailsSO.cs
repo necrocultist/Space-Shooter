@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "WeaponDetails_", menuName = "Scriptable Objects/Weapons/Weapon Details")]
@@ -14,7 +12,7 @@ public class WeaponDetailsSO : ScriptableObject
     public string weaponName;
 
     public Sprite weaponSprite;
-    
+
     #region Header WEAPON CONFIGURATION
 
     [Space(10)] [Header("WEAPON CONFIGURATION")]
@@ -24,6 +22,31 @@ public class WeaponDetailsSO : ScriptableObject
     public Vector3 weaponShootPosition;
 
     public AmmoDetailsSO weaponCurrentAmmo;
-    
-    //TODO: 
+
+    public SoundEffectSO weaponFireSoundEffect;
+    public SoundEffectSO weaponReloadSoundEffect;
+
+    public bool hasInfiniteAmmo = false;
+    public bool hasInfiniteCapacity = false;
+
+    public int weaponClipAmmoCapacity = 12;
+    public int weaponAmmoCapacity = 100;
+
+    public float weaponPrechargeTime = 0f;
+    public float weaponFireRate;
+    public float weaponReloadTime;
+
+    #region Validation
+
+#if UNITY_EDITOR
+
+    private void OnValidate()
+    {
+        HelperUtilities.ValidateCheckEmptyString(this, nameof(weaponName), weaponName);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(weaponCurrentAmmo), weaponCurrentAmmo);
+    }
+
+#endif
+
+    #endregion Validation
 }
