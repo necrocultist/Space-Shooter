@@ -1,18 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class AmmoDetailsSO : MonoBehaviour
+[CreateAssetMenu(fileName = "AmmoDetails_", menuName = "Scriptable Objects/Weapons/Ammo Details")]
+public class AmmoDetailsSO : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    #region Header BASIC AMMO DETAILS
+    [Space(10)]
+    [Header("BASIC AMMO DETAILS")]
+    #endregion
+    public string ammoName;
+    public bool isPlayerAmmo;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    #region Header AMMO SPRITE, PREFAB & MATERIALS
+    [Space(10)]
+    [Header("AMMO SPRITE, PREFAB & MATERIALS")]
+    #endregion
+
 }

@@ -2,13 +2,19 @@ using System;
 using UnityEngine;
 
 [DisallowMultipleComponent]
-public class 
+public class
     WeaponEvents : MonoBehaviour
 {
+    public event Action<WeaponEvents, SetActiveWeaponEventArgs> OnSetActiveWeapon;
     public event Action<WeaponEvents, FireWeaponEventArgs> OnFireWeapon;
     public event Action<WeaponEvents, WeaponFiredEventArgs> OnWeaponFired;
     public event Action<WeaponEvents, ReloadWeaponArgs> OnReloadWeapon;
     public event Action<WeaponEvents, WeaponReloadedEventArgs> OnWeaponReloaded;
+
+    public void CallSetActiveWeaponEvent(Weapon weapon)
+    {
+        OnSetActiveWeapon?.Invoke(this, new SetActiveWeaponEventArgs() { weapon = weapon });
+    }
 
     public void CallFireWeaponEvent(bool fire, Vector3 weaponAimDirection, bool firePreviousFrame)
     {
@@ -19,9 +25,9 @@ public class
 
     public void CallWeaponFired(Weapon weapon)
     {
-        OnWeaponFired?.Invoke(this, new WeaponFiredEventArgs(){ weapon = weapon});
+        OnWeaponFired?.Invoke(this, new WeaponFiredEventArgs() { weapon = weapon });
     }
-    
+
     public void CallReloadWeaponEvent(Weapon weapon, int reloadAmmoPercent)
     {
         OnReloadWeapon?.Invoke(this, new ReloadWeaponArgs() { weapon = weapon, reloadAmmoPercent = reloadAmmoPercent });
@@ -31,6 +37,11 @@ public class
     {
         OnWeaponReloaded?.Invoke(this, new WeaponReloadedEventArgs() { weapon = weapon });
     }
+}
+
+public class SetActiveWeaponEventArgs : EventArgs
+{
+    public Weapon weapon;
 }
 
 public class FireWeaponEventArgs : EventArgs

@@ -27,7 +27,7 @@ public class WeaponDetailsSO : ScriptableObject
     public SoundEffectSO weaponReloadSoundEffect;
 
     public bool hasInfiniteAmmo = false;
-    public bool hasInfiniteCapacity = false;
+    public bool hasInfiniteClipCapacity = false;
 
     public int weaponClipAmmoCapacity = 12;
     public int weaponAmmoCapacity = 100;
