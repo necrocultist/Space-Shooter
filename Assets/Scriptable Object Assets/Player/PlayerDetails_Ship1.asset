@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6d8b830211954544a26d04dfe103fd5, type: 3}
+  m_Name: PlayerDetails_Ship1
+  m_EditorClassIdentifier: 
+  playerCharacterName: Ship1
+  playerPrefab: {fileID: 0}
+  runtimeAnimatorController: {fileID: 0}
+  playerHealthAmount: 100
+  isImmuneAfterHit: 0
+  hitImmunityTime: 2
+  playerMiniMapIcon: {fileID: 0}
