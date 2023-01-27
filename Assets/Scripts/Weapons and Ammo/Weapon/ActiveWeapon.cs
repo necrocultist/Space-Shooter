@@ -62,7 +62,7 @@ public class ActiveWeapon : MonoBehaviour
             weaponPolygonCollider2D.points = spritePhysicsShapePointsList.ToArray();
 
         }
-        weaponShootPositionTransform.localPosition = currentWeapon.weaponDetails.weaponShootPosition;
+        weaponShootPositionTransform.localPosition = currentWeapon.weaponDetails.weaponShootPosition[0];
     }
 
     public AmmoDetailsSO GetCurrentAmmo()

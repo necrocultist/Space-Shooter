@@ -34,28 +34,16 @@ public class GameResources : MonoBehaviour
     [Header("Music")]
 
     #endregion
-    #region Tooltip
-
-    [Tooltip("Populate with the music master mixer group")]
-
-    #endregion
     public AudioMixerGroup musicMasterMixerGroup;
-    #region Tooltip
-
-    [Tooltip("Main menu music scriptable object")]
-
-    #endregion Tooltip
     public MusicTrackSO mainMenuMusic;
-    #region Tooltip
-
-    [Tooltip("music on full snapshot")]
-
-    #endregion Tooltip
     public AudioMixerSnapshot musicOnFullSnapShot;
-    #region Tooltip
-
-    [Tooltip("music low snapshot")]
-
-    #endregion Tooltip
+    public AudioMixerSnapshot musicOffSnapshot;
     public AudioMixerSnapshot musicLowSnapShot;
+    
+    #region Header UI
+    [Space(10)]
+    [Header("UI")]
+    #endregion
+    public GameObject heartPrefab;
+    public GameObject scorePrefab;
 }

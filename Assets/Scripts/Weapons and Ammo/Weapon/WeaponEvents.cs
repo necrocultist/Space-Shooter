@@ -23,7 +23,7 @@ public class
                 { fire = fire, weaponAimDirection = weaponAimDirection, firePreviousFrame = firePreviousFrame });
     }
 
-    public void CallWeaponFired(Weapon weapon)
+    public void CallWeaponFiredEvent(Weapon weapon)
     {
         OnWeaponFired?.Invoke(this, new WeaponFiredEventArgs() { weapon = weapon });
     }

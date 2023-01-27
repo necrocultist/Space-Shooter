@@ -14,10 +14,9 @@ public class MusicManager : SingletonMonoBehaviour<MusicManager>
     {
         base.Awake();
 
-        // Load components
         musicAudioSource = GetComponent<AudioSource>();
 
-        // TODO: Start with music off
+        GameResources.Instance.musicOffSnapshot.TransitionTo(0f);
     }
 
     private void Start()

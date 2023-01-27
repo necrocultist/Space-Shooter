@@ -19,7 +19,7 @@ public class WeaponDetailsSO : ScriptableObject
 
     #endregion Header WEAPON CONFIGURATION
 
-    public Vector3 weaponShootPosition;
+    public Vector3[] weaponShootPosition;
 
     public AmmoDetailsSO weaponCurrentAmmo;
 
@@ -32,7 +32,6 @@ public class WeaponDetailsSO : ScriptableObject
     public int weaponClipAmmoCapacity = 12;
     public int weaponAmmoCapacity = 100;
 
-    public float weaponPrechargeTime = 0f;
     public float weaponFireRate;
     public float weaponReloadTime;
 
