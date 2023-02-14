@@ -22,7 +22,8 @@ I'm currently implementing the base of the project including Managers(game, audi
 ## Reference Screenshots From Arcade Games
 
 ![inGame](Screenshots/axelay.jpg)
-Axelay
+![inGame](Screenshots/r-typeIII.jpg)
+![inGame](Screenshots/gradiusIII.png)
 
 ## Used Assets
 
