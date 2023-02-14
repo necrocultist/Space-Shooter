@@ -9,7 +9,7 @@ I'm currently implementing the base of the project including Managers(game, audi
 
 ## Work In Progress Features
 
-- 3 playable ship types
+- 4 playable ship types
 - Upgrade system
 - Combat system
 - 3 levels with similar enemy AIs, different designs
