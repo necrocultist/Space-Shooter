@@ -23,10 +23,6 @@ I'm currently implementing the base of the project including Managers(game, audi
 
 - Axelay
 ![inGame](Screenshots/axelay.jpg)
-- R-Type III
-![inGame](Screenshots/r-typeIII.jpg)
-- Gradius III
-![inGame](Screenshots/gradiusIII.png)
 
 ## Used Assets
 
