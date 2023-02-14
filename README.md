@@ -21,8 +21,8 @@ I'm currently implementing the base of the project including Managers(game, audi
 
 ## Reference Screenshots From Arcade Games
 
-Axelay
 ![inGame](Screenshots/axelay.jpg)
+Axelay
 
 ## Used Assets
 
