@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class MusicManager : SingletonMonoBehaviour<MusicManager>
+public class MusicManager : SingletonMonobehaviour<MusicManager>
 {
     private AudioSource musicAudioSource;
     private AudioClip currentAudioClip;
