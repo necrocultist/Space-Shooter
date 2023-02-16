@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [DisallowMultipleComponent]
-public class PoolManager : SingletonMonoBehaviour<PoolManager>
+public class PoolManager : SingletonMonobehaviour<PoolManager>
 {
     #region Tooltip
 
