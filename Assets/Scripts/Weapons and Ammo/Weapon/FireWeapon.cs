@@ -28,12 +28,12 @@ public class FireWeapon : MonoBehaviour
         weaponEvents.OnFireWeapon -= HandleFireWeaponEvent;
     }
 
-    private void HandleFireWeaponEvent(WeaponEvents weaponEvents, FireWeaponEventArgs fireWeaponeventArgs)
+    private void HandleFireWeaponEvent(WeaponEvents weaponEvents, FireWeaponArgs fireWeaponeventArgs)
     {
         WeaponFire(fireWeaponeventArgs);
     }
 
-    private void WeaponFire(FireWeaponEventArgs fireWeaponeventArgs)
+    private void WeaponFire(FireWeaponArgs fireWeaponeventArgs)
     {
         WeaponPreCharge(fireWeaponeventArgs);
 
@@ -46,7 +46,7 @@ public class FireWeapon : MonoBehaviour
         }
     }
 
-    private void WeaponPreCharge(FireWeaponEventArgs fireWeaponeventArgs)
+    private void WeaponPreCharge(FireWeaponArgs fireWeaponeventArgs)
     {
         if (fireWeaponeventArgs.firePreviousFrame)
         {

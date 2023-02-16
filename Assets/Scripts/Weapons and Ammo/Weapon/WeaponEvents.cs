@@ -5,27 +5,27 @@ using UnityEngine;
 public class
     WeaponEvents : MonoBehaviour
 {
-    public event Action<WeaponEvents, SetActiveWeaponEventArgs> OnSetActiveWeapon;
-    public event Action<WeaponEvents, FireWeaponEventArgs> OnFireWeapon;
-    public event Action<WeaponEvents, WeaponFiredEventArgs> OnWeaponFired;
+    public event Action<WeaponEvents, SetActiveWeaponArgs> OnSetActiveWeapon;
+    public event Action<WeaponEvents, FireWeaponArgs> OnFireWeapon;
+    public event Action<WeaponEvents, WeaponFiredArgs> OnWeaponFired;
     public event Action<WeaponEvents, ReloadWeaponArgs> OnReloadWeapon;
-    public event Action<WeaponEvents, WeaponReloadedEventArgs> OnWeaponReloaded;
+    public event Action<WeaponEvents, WeaponReloadedArgs> OnWeaponReloaded;
 
     public void CallSetActiveWeaponEvent(Weapon weapon)
     {
-        OnSetActiveWeapon?.Invoke(this, new SetActiveWeaponEventArgs() { weapon = weapon });
+        OnSetActiveWeapon?.Invoke(this, new SetActiveWeaponArgs() { weapon = weapon });
     }
 
     public void CallFireWeaponEvent(bool fire, Vector3 weaponAimDirection, bool firePreviousFrame)
     {
         OnFireWeapon?.Invoke(this,
-            new FireWeaponEventArgs()
+            new FireWeaponArgs()
                 { fire = fire, weaponAimDirection = weaponAimDirection, firePreviousFrame = firePreviousFrame });
     }
 
     public void CallWeaponFiredEvent(Weapon weapon)
     {
-        OnWeaponFired?.Invoke(this, new WeaponFiredEventArgs() { weapon = weapon });
+        OnWeaponFired?.Invoke(this, new WeaponFiredArgs() { weapon = weapon });
     }
 
     public void CallReloadWeaponEvent(Weapon weapon, int reloadAmmoPercent)
@@ -35,23 +35,23 @@ public class
 
     public void CallWeaponReloadedEvent(Weapon weapon)
     {
-        OnWeaponReloaded?.Invoke(this, new WeaponReloadedEventArgs() { weapon = weapon });
+        OnWeaponReloaded?.Invoke(this, new WeaponReloadedArgs() { weapon = weapon });
     }
 }
 
-public class SetActiveWeaponEventArgs : EventArgs
+public class SetActiveWeaponArgs : EventArgs
 {
     public Weapon weapon;
 }
 
-public class FireWeaponEventArgs : EventArgs
+public class FireWeaponArgs : EventArgs
 {
     public bool fire;
     public Vector3 weaponAimDirection;
     public bool firePreviousFrame;
 }
 
-public class WeaponFiredEventArgs : EventArgs
+public class WeaponFiredArgs : EventArgs
 {
     public Weapon weapon;
 }
@@ -62,7 +62,7 @@ public class ReloadWeaponArgs : EventArgs
     public int reloadAmmoPercent;
 }
 
-public class WeaponReloadedEventArgs : EventArgs
+public class WeaponReloadedArgs : EventArgs
 {
     public Weapon weapon;
 }

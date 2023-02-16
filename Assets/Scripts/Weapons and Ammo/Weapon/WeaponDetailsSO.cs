@@ -34,6 +34,7 @@ public class WeaponDetailsSO : ScriptableObject
 
     public float weaponFireRate;
     public float weaponReloadTime;
+    public float weaponPrechargeTime;
 
     #region Validation
 

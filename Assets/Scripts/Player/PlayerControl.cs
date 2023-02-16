@@ -107,9 +107,15 @@ public class PlayerControl : MonoBehaviour
         player.animator.speed = Settings.baseSpeedForPlayerAnimations;
     }
 
-    public void EnablePlayerMovement()
+    public void EnablePlayer()
     {
         isPlayerMovementDisabled = false;
+    }
+    
+    public void DisablePlayer()
+    {
+        isPlayerMovementDisabled = true;
+        player.movementEvents.CallIdleEvent();
     }
 
     #region Validation

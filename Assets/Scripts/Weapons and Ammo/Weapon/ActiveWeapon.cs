@@ -41,9 +41,9 @@ public class ActiveWeapon : MonoBehaviour
         weaponEvents.OnSetActiveWeapon -= HanldeSetActiveWeaponEvent;
     }
 
-    private void HanldeSetActiveWeaponEvent(WeaponEvents weaponEvents, SetActiveWeaponEventArgs setActiveWeaponEventArgs)
+    private void HanldeSetActiveWeaponEvent(WeaponEvents weaponEvents, SetActiveWeaponArgs setActiveWeaponArgs)
     {
-        SetWeapon(setActiveWeaponEventArgs.weapon);
+        SetWeapon(setActiveWeaponArgs.weapon);
     }
 
     private void SetWeapon(Weapon weapon)
