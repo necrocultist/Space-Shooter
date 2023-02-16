@@ -2,17 +2,22 @@ using UnityEngine;
 
 [RequireComponent(typeof(HealthEvents))]
 [RequireComponent(typeof(Health))]
+[RequireComponent(typeof(MovementEvents))]
+[RequireComponent(typeof(WeaponEvents))]
 [RequireComponent(typeof(DealContactDamage))]
-[RequireComponent(typeof(SpriteRenderer))]
+[RequireComponent(typeof(AnimateEnemy))]
 [RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(SpriteRenderer))]
 [RequireComponent(typeof(Rigidbody2D))]
 
 [DisallowMultipleComponent]
 public class Enemy : MonoBehaviour
 {
     [HideInInspector] public EnemyDetailsSO enemyDetails;
-    private HealthEvents healthEvents;
-    private Health health;
+    public Health health;
+    public HealthEvents healthEvents;
+    public MovementEvents movementEvents;
+    public WeaponEvents weaponEvents;
     [HideInInspector] public SpriteRenderer spriteRenderer;
     [HideInInspector] public Animator animator;
 
